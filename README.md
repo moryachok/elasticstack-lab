@@ -2,6 +2,11 @@
 
 This project will provide you an easy way to learn and play with elasticstack and in particular with logstash and filebeat configurations.
 
+Project runs filebeat,logstash,elasticsearch and kibana. All with version 6.7.
+It provides entry points for configuring filebeat and logstash conf files.
+
+So you can play and create grok patterns easily, change filebeat configurations and do whatever you want without need of installing all the components separately.
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
@@ -13,72 +18,32 @@ https://docs.docker.com/install/
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
+You need to clone this repo to any path at your local machine
 
 ```
-Give the example
+git clone https://github.com/moryachok/elasticstack-lab.git
 ```
 
-And repeat
+Now run docker-compose in order to build the stack. On first build it may take some time to get all the required images.
 
 ```
-until finished
+cd elasticstack-lab/
+docker-compose up
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
+You can optionally run docker-compose in detached mode
 
 ```
-Give an example
+docker-compose up -d
 ```
 
-### And coding style tests
+After build process finishes you will be able to enter Kibana dashboard and see there some sample data
 
-Explain what these tests test and why
+## Enter Kibana
 
-```
-Give an example
-```
+Now open your browser and navigate to http://127.0.0.1:5601
+You should see fresh Kibana dashboard.
+It will ask you to configure your first index.
 
-## Deployment
 
-Add additional notes about how to deploy this on a live system
 
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
